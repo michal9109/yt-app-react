@@ -16,14 +16,12 @@ const App = () => {
   return (
     <div className='ui container'>
       <SearchBar onFormSubmit={search} />
-      <div className='ui grid'>
-        <div className='ui row'>
-          <div className='eleven wide column'>
-            <VideoDetail video={selectedVideo} />
-          </div>
-          <div className='five wide column'>
-            <VideoList onVideoSelect={setSelectedVideo} videos={videos} />
-          </div>
+      <div className='ui column stackable grid'>
+        <div className='eleven wide column'>
+          <VideoDetail video={selectedVideo} />
+        </div>
+        <div className='five wide column'>
+          <VideoList onVideoSelect={setSelectedVideo} videos={videos} />
         </div>
       </div>
     </div>
